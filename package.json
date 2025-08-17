@@ -1,0 +1,22 @@
+{
+  "name": "milos-cookies-website",
+  "version": "1.0.0",
+  "description": "A beautiful website for Milo's Cookies bakery",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'Build complete'",
+    "dev": "serve . -l 3000"
+  },
+  "keywords": [
+    "cookies",
+    "bakery",
+    "website",
+    "responsive"
+  ],
+  "author": "darkhiyoo",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}

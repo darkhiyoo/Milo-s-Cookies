@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كوكيز ميلو - كوكيز محلية الصنع لذيذة</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Eruda for mobile debugging -->
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>eruda.init();</script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logo.jpg" alt="شعار كوكيز ميلو" class="logo-img">
+                    <span data-ar="كوكيز ميلو" data-en="Milo's Cookies">كوكيز ميلو</span>
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+                    <li><a href="#samples" class="nav-link" data-ar="كوكيزنا" data-en="Our Cookies">كوكيزنا</a></li>
+                    <li><a href="#contact" class="nav-link" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a></li>
+                    <li><a href="#qr-section" class="nav-link" data-ar="مشاركة" data-en="Share">مشاركة</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="lang-toggle" onclick="toggleLanguage()">
+                        <i class="fas fa-globe"></i>
+                        <span id="lang-text">EN</span>
+                    </button>
+                    <div class="hamburger" id="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-ar="مرحباً بكم في كوكيز ميلو" data-en="Welcome to Milo's Cookies">مرحباً بكم في كوكيز ميلو</h1>
+            <p data-ar="كوكيز طازج ولذيذ محلي الصنع مصنوع بحب" data-en="Freshly baked, delicious homemade cookies made with love">كوكيز طازج ولذيذ محلي الصنع مصنوع بحب</p>
+            <a href="#samples" class="cta-button">
+                <i class="fas fa-shopping-cart"></i>
+                <span data-ar="اطلب الآن عبر واتساب" data-en="Order Now via WhatsApp">اطلب الآن عبر واتساب</span>
+            </a>
+        </div>
+        <div class="hero-image">
+            <div class="cookie-icon">🍪</div>
+        </div>
+    </section>
+
+    <!-- Cookie Samples Section -->
+    <section id="samples" class="samples-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="كوكيزنا اللذيذ" data-en="Our Delicious Cookies">كوكيزنا اللذيذ</h2>
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-button active" onclick="openTab(event, 'sample1')" data-ar="العينة الأولى" data-en="Sample 1">العينة الأولى</button>
+                    <button class="tab-button" onclick="openTab(event, 'sample2')" data-ar="العينة الثانية" data-en="Sample 2">العينة الثانية</button>
+                </div>
+
+                <div id="sample1" class="tab-content active">
+                    <div class="sample-image">
+                        <img src="sample1.jpg" alt="العينة الأولى من الكوكيز" class="sample-img">
+                    </div>
+                    <div class="cookie-grid">
+                        <div class="cookie-card">
+                            <div class="cookie-image">🍪</div>
+                            <h3 data-ar="كوكيز الشوكولاتة الشيب" data-en="Chocolate Chip Cookies">كوكيز الشوكولاتة الشيب</h3>
+                            <p data-ar="كوكيز الشوكولاتة الكلاسيكي مع قطع الشوكولاتة المميزة" data-en="Classic chocolate chip cookies with premium chocolate chunks">كوكيز الشوكولاتة الكلاسيكي مع قطع الشوكولاتة المميزة</p>
+                            <div class="price">47 ريال / دستة</div>
+                            <button class="order-btn" onclick="orderCookie('كوكيز الشوكولاتة الشيب', '47')">
+                                <i class="fab fa-whatsapp"></i> 
+                                <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                            </button>
+                        </div>
+                        
+                        <div class="cookie-card">
+                            <div class="cookie-image">🍪</div>
+                            <h3 data-ar="كوكيز الشوفان والزبيب" data-en="Oatmeal Raisin">كوكيز الشوفان والزبيب</h3>
+                            <p data-ar="كوكيز الشوفان الصحي مع الزبيب الحلو والتوابل الدافئة" data-en="Hearty oatmeal cookies with sweet raisins and warm spices">كوكيز الشوفان الصحي مع الزبيب الحلو والتوابل الدافئة</p>
+                            <div class="price">45 ريال / دستة</div>
+                            <button class="order-btn" onclick="orderCookie('كوكيز الشوفان والزبيب', '45')">
+                                <i class="fab fa-whatsapp"></i> 
+                                <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                            </button>
+                        </div>
+                        
+                        <div class="cookie-card">
+                            <div class="cookie-image">🍪</div>
+                            <h3 data-ar="كوكيز السكر" data-en="Sugar Cookies">كوكيز السكر</h3>
+                            <p data-ar="كوكيز السكر الناعم والحلو المثالي لأي مناسبة" data-en="Soft and sweet sugar cookies perfect for any occasion">كوكيز السكر الناعم والحلو المثالي لأي مناسبة</p>
+                            <div class="price">41 ريال / دستة</div>
+                            <button class="order-btn" onclick="orderCookie('كوكيز السكر', '41')">
+                                <i class="fab fa-whatsapp"></i> 
+                                <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sample2" class="tab-content">
+                    <div class="sample-image">
+                        <img src="sample2.jpg" alt="العينة الثانية من الكوكيز" class="sample-img">
+                    </div>
+                    <div class="cookie-grid">
+                        <div class="cookie-card">
+                            <div class="cookie-image">🍪</div>
+                            <h3 data-ar="كوكيز الشوكولاتة المضاعفة" data-en="Double Chocolate">كوكيز الشوكولاتة المضاعفة</h3>
+                            <p data-ar="كوكيز شوكولاتة غني مع قطع الشوكولاتة البيضاء" data-en="Rich chocolate cookies with white chocolate chips">كوكيز شوكولاتة غني مع قطع الشوكولاتة البيضاء</p>
+                            <div class="price">52 ريال / دستة</div>
+                            <button class="order-btn" onclick="orderCookie('كوكيز الشوكولاتة المضاعفة', '52')">
+                                <i class="fab fa-whatsapp"></i> 
+                                <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                            </button>
+                        </div>
+                        
+                        <div class="cookie-card">
+                            <div class="cookie-image">🍪</div>
+                            <h3 data-ar="كوكيز زبدة الفول السوداني" data-en="Peanut Butter">كوكيز زبدة الفول السوداني</h3>
+                            <p data-ar="كوكيز زبدة الفول السوداني الكريمي بقوام مطاطي مثالي" data-en="Creamy peanut butter cookies with a perfect chewy texture">كوكيز زبدة الفول السوداني الكريمي بقوام مطاطي مثالي</p>
+                            <div class="price">47 ريال / دستة</div>
+                            <button class="order-btn" onclick="orderCookie('كوكيز زبدة الفول السوداني', '47')">
+                                <i class="fab fa-whatsapp"></i> 
+                                <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                            </button>
+                        </div>
+                        
+                        <div class="cookie-card">
+                            <div class="cookie-image">🍪</div>
+                            <h3 data-ar="كوكيز السنيكر دودل" data-en="Snickerdoodle">كوكيز السنيكر دودل</h3>
+                            <p data-ar="كوكيز السكر والقرفة مع مركز ناعم ومرقق" data-en="Cinnamon sugar cookies with a soft, tender center">كوكيز السكر والقرفة مع مركز ناعم ومرقق</p>
+                            <div class="price">43 ريال / دستة</div>
+                            <button class="order-btn" onclick="orderCookie('كوكيز السنيكر دودل', '43')">
+                                <i class="fab fa-whatsapp"></i> 
+                                <span data-ar="اطلب الآن" data-en="Order Now">اطلب الآن</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
+            <div class="contact-card">
+                <div class="card-image">
+                    <img src="card.jpg" alt="بطاقة التواصل" class="card-img">
+                </div>
+                <div class="contact-info">
+                    <h3 data-ar="تواصل معنا" data-en="Get in Touch">تواصل معنا</h3>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong data-ar="واتساب" data-en="WhatsApp">واتساب</strong>
+                            <p>+966 537 300 127</p>
+                            <a href="https://wa.me/966537300127" class="whatsapp-link" target="_blank" data-ar="راسلنا للطلبات" data-en="Message us for orders">
+                                راسلنا للطلبات
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong data-ar="ساعات العمل" data-en="Business Hours">ساعات العمل</strong>
+                            <p data-ar="الاثنين - السبت: 9:00 ص - 8:00 م" data-en="Monday - Saturday: 9:00 AM - 8:00 PM">الاثنين - السبت: 9:00 ص - 8:00 م</p>
+                            <p data-ar="الأحد: 10:00 ص - 6:00 م" data-en="Sunday: 10:00 AM - 6:00 PM">الأحد: 10:00 ص - 6:00 م</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-truck"></i>
+                        <div>
+                            <strong data-ar="التوصيل" data-en="Delivery">التوصيل</strong>
+                            <p data-ar="توصيل مجاني للطلبات أكثر من 95 ريال" data-en="Free delivery on orders over 95 SAR">توصيل مجاني للطلبات أكثر من 95 ريال</p>
+                            <p data-ar="توصيل في نفس اليوم متاح" data-en="Same-day delivery available">توصيل في نفس اليوم متاح</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QR Code Section -->
+    <section id="qr-section" class="qr-section">
+        <div class="container">
+            <h2 class="section-title" data-ar="شارك موقعنا" data-en="Share Our Website">شارك موقعنا</h2>
+            <div class="qr-container">
+                <div class="qr-card">
+                    <h3 data-ar="امسح للزيارة" data-en="Scan to Visit">امسح للزيارة</h3>
+                    <div id="qr-code-container">
+                        <!-- QR Code will be generated here -->
+                        <img id="qr-code-img" src="" alt="QR Code" style="display: none;">
+                        <div id="qr-fallback">
+                            <div class="url-display">
+                                <strong data-ar="رابط الموقع:" data-en="Website URL:">رابط الموقع:</strong><br>
+                                <span id="website-url">milos-cookies.vercel.app</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p data-ar="شارك هذا الرمز مع الأصدقاء والعائلة!" data-en="Share this QR code with friends and family!">شارك هذا الرمز مع الأصدقاء والعائلة!</p>
+                    <button class="download-btn" onclick="downloadQR()">
+                        <i class="fas fa-download"></i> 
+                        <span data-ar="تحميل الرمز" data-en="Download QR Code">تحميل الرمز</span>
+                    </button>
+                    <button class="generate-btn" onclick="generateQR()">
+                        <i class="fas fa-qrcode"></i> 
+                        <span data-ar="إنشاء الرمز" data-en="Generate QR">إنشاء الرمز</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.jpg" alt="شعار كوكيز ميلو" class="logo-img">
+                    <span data-ar="كوكيز ميلو" data-en="Milo's Cookies">كوكيز ميلو</span>
+                </div>
+                <p data-ar="© 2025 كوكيز ميلو. صُنع بـ ❤️ والكثير من الكوكيز!" data-en="© 2025 Milo's Cookies. Made with ❤️ and lots of cookies!">&copy; 2025 كوكيز ميلو. صُنع بـ ❤️ والكثير من الكوكيز!</p>
+                <div class="social-links">
+                    <a href="https://wa.me/966537300127" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
