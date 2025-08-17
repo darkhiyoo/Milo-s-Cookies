@@ -4,9 +4,7 @@
   "description": "A beautiful website for Milo's Cookies bakery",
   "main": "index.html",
   "scripts": {
-    "start": "serve .",
-    "build": "echo 'Build complete - static files ready'",
-    "dev": "serve . -l 3000"
+    "build": "echo 'Static build complete'"
   },
   "keywords": [
     "cookies",

@@ -246,7 +246,7 @@ body:not(.english) .hero-content {
     background-clip: text;
 }
 
-/* Sample Images - Fixed cropping issue */
+/* Sample Images */
 .sample-image {
     text-align: center;
     margin-bottom: 2rem;
@@ -256,13 +256,13 @@ body:not(.english) .hero-content {
     max-width: 400px;
     width: 100%;
     height: 250px;
-    object-fit: contain; /* Changed from cover to contain to show full image */
+    object-fit: contain;
     object-position: center;
     border-radius: 15px;
     border: 3px solid #db7093;
     box-shadow: 0 10px 25px rgba(219, 112, 147, 0.3);
-    background: rgba(255, 255, 255, 0.1); /* Add background for better visibility */
-    padding: 10px; /* Add padding to prevent edge cutting */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
 }
 
 /* Tabs */
@@ -402,12 +402,12 @@ body:not(.english) .hero-content {
     width: 100%;
     max-width: 250px;
     height: 350px;
-    object-fit: contain; /* Changed from cover to contain */
+    object-fit: contain;
     object-position: center;
     border-radius: 15px;
     border: 3px solid #db7093;
-    background: rgba(255, 255, 255, 0.1); /* Add background */
-    padding: 10px; /* Add padding */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
 }
 
 .contact-info {
@@ -467,92 +467,6 @@ body:not(.english) .contact-item {
 
 .whatsapp-link:hover {
     color: #128c7e;
-}
-
-/* QR Section */
-.qr-section {
-    padding: 80px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-}
-
-.qr-container {
-    display: flex;
-    justify-content: center;
-}
-
-.qr-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    padding: 3rem;
-    text-align: center;
-    border: 1px solid rgba(219, 112, 147, 0.3);
-    max-width: 400px;
-}
-
-.qr-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #ff69b4;
-}
-
-#qr-code-container {
-    margin: 1.5rem 0;
-    display: flex;
-    justify-content: center;
-    min-height: 300px;
-    align-items: center;
-}
-
-#qr-code-img {
-    border-radius: 10px;
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.url-display {
-    background: white;
-    color: #2d1b3d;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-    word-break: break-all;
-    font-size: 0.9em;
-    line-height: 1.4;
-    border: 2px solid #db7093;
-}
-
-.qr-card p {
-    margin-bottom: 1.5rem;
-    color: #e6e6fa;
-}
-
-.download-btn, .generate-btn {
-    background: linear-gradient(45deg, #db7093, #ff69b4);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: inherit;
-    margin: 5px;
-}
-
-.generate-btn {
-    background: linear-gradient(45deg, #6b3d7a, #db7093);
-}
-
-.download-btn:hover, .generate-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(219, 112, 147, 0.4);
 }
 
 /* Footer */
@@ -672,10 +586,6 @@ body:not(.english) .contact-item {
         text-align: center;
     }
 
-    .qr-card {
-        padding: 2rem;
-    }
-
     .sample-img {
         max-width: 300px;
         height: 200px;
@@ -684,10 +594,6 @@ body:not(.english) .contact-item {
     .card-img {
         max-width: 200px;
         height: 250px;
-    }
-
-    #qr-code-container {
-        min-height: 250px;
     }
 }
 
@@ -712,9 +618,5 @@ body:not(.english) .contact-item {
     .card-img {
         max-width: 180px;
         height: 220px;
-    }
-
-    #qr-code-container {
-        min-height: 200px;
     }
 }
