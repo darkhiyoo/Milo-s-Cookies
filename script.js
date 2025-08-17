@@ -100,7 +100,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// QR Code Generation using Google Charts API (No external library needed!)
+// QR Code Generation using Google Charts API
 function generateQR() {
     console.log('Generating QR code...');
     
@@ -113,7 +113,7 @@ function generateQR() {
     
     // Clean up URL for production
     if (websiteUrl.includes('localhost') || websiteUrl.includes('127.0.0.1')) {
-        websiteUrl = 'https://milos-cookies.vercel.app'; // Your Vercel URL
+        websiteUrl = 'https://milo-s-cookies.vercel.app'; // Updated with your actual Vercel URL
     }
     
     // Update URL display

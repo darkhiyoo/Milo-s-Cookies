@@ -4,8 +4,8 @@
   "description": "A beautiful website for Milo's Cookies bakery",
   "main": "index.html",
   "scripts": {
-    "start": "serve .",
-    "build": "echo 'Build complete'",
+    "start": "serve public",
+    "build": "mkdir -p public && cp -r *.html *.css *.js *.jpg *.png public/ 2>/dev/null || true",
     "dev": "serve . -l 3000"
   },
   "keywords": [
